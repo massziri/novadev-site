@@ -1,0 +1,16 @@
+[build]
+  command = "python -c \"import zipfile; zipfile.ZipFile('novadev_netlify_ready.zip').extractall('public')\""
+  publish = "public"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+[[redirects]]
+  from = "/success"
+  to = "/?submitted=true"
+  status = 200
