@@ -1,6 +1,9 @@
 [build]
-  command = "python -c \"import zipfile; zipfile.ZipFile('novadev_netlify_ready.zip').extractall('public')\""
+  command = "python3 -c \"import zipfile; zipfile.ZipFile('novadev_smtp_update.zip').extractall('.')\" && mkdir -p netlify/functions && cp upload_bundle/netlify/functions/send-email.js netlify/functions/ && cp upload_bundle/package.json . && npm install && python3 -c \"import zipfile; zipfile.ZipFile('upload_bundle/novadev_netlify_ready.zip').extractall('public')\""
   publish = "public"
+
+[functions]
+  directory = "netlify/functions"
 
 [[headers]]
   for = "/*"
