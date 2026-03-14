@@ -11,7 +11,7 @@
   //  Get your FREE key at: https://web3forms.com/
   //  Enter your email → they send you a key → paste it below
   // ─────────────────────────────────────────────────────────
-  const WEB3FORMS_ACCESS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY'; // ← replace this
+  const WEB3FORMS_ACCESS_KEY = 'f6e1908a-ddfd-4d21-816c-907bb3205e54'; // ← replace this
 
   // ── Smooth Scroll ──────────────────────────────────────────
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
